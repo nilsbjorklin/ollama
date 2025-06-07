@@ -9,8 +9,8 @@ until curl -s http://localhost:11434 > /dev/null; do
   sleep 1
 done
 
-echo "Ollama is ready, creating model gemma3..."
+echo "Ollama is ready, creating model qwen3:1.7b..."
 
-ollama run gemma3
+ollama run qwen3:1.7b
 
 echo "Ollama is running"

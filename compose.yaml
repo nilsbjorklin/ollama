@@ -12,3 +12,8 @@ services:
     tty: true
     restart: always
     entrypoint: ["/run.sh"]
+networks:
+  ollama:
+    name: ollama
+    attachable: true
+    driver: bridge
