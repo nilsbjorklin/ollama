@@ -1,0 +1,14 @@
+services:
+  ollama:
+    build: .
+    pull_policy: always
+    container_name: ollama
+    ports:
+      - 11434:11434
+    volumes:
+      - ./ollama/ollama:/root/.ollama
+      - ./modelfiles:/modelfiles
+      - ./run.sh:/run.sh
+    tty: true
+    restart: always
+    entrypoint: ["/run.sh"]
