@@ -12,6 +12,8 @@ services:
     tty: true
     restart: always
     entrypoint: ["/run.sh"]
+    networks:
+      - ollama
 networks:
   ollama:
     name: ollama
