@@ -1,5 +1,8 @@
 services:
   ollama:
+    env_file:
+      - path: ./default.env
+        required: true
     build: .
     pull_policy: always
     container_name: ollama
